@@ -4,75 +4,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfólio - Gustavo Silva Dos Reis</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
+    /* Reset básico para consistência entre navegadores */
+    * {
       margin: 0;
-      /* Gradiente de fundo sutil */
-      background: linear-gradient(135deg, #e0eafc, #cfdef3);
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif; /* Fonte mais clean e legível */
+      background-color: #f8f9fa; /* Fundo muito claro, quase branco */
+      color: #343a40; /* Texto em tom de cinza escuro para contraste */
       line-height: 1.6;
+      overflow-x: hidden; /* Evita scroll horizontal em caso de elementos grandes */
     }
 
     header {
-      background-color: #004080;
+      background-color: #0056b3; /* Um azul um pouco mais vivo, mas profissional */
       color: white;
-      padding: 2.5rem 1rem;
+      padding: 3rem 1.5rem;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra suave */
+      border-bottom-left-radius: 15px; /* Bordas arredondadas na parte inferior */
+      border-bottom-right-radius: 15px;
     }
 
     .profile-pic {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
       border: 5px solid white;
       margin-bottom: 1.5rem;
-      transition: transform 0.3s ease-in-out; /* Animação ao passar o mouse */
-    }
-
-    .profile-pic:hover {
-      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para a imagem de perfil */
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       margin-bottom: 0.5rem;
+      font-weight: 700; /* Mais negrito para o título */
     }
 
     header p {
-      font-size: 1.2rem;
-      opacity: 0.9;
+      font-size: 1.3rem;
+      opacity: 0.95;
+      font-weight: 300; /* Mais leve para a descrição */
     }
 
     main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
+      max-width: 960px; /* Largura um pouco maior para o conteúdo principal */
+      margin: 3rem auto;
+      padding: 0 2rem;
     }
 
     section {
       background-color: white;
-      padding: 2rem;
+      padding: 2.5rem;
       border-radius: 10px;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-      margin-bottom: 2.5rem;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08); /* Sombra suave para as seções */
+      margin-bottom: 3rem;
+      border-left: 5px solid #0056b3; /* Linha azul no lado esquerdo da seção */
     }
 
     h2 {
-      font-size: 1.8rem;
-      color: #004080;
-      border-bottom: 3px solid #004080;
-      padding-bottom: 0.7rem;
+      font-size: 2.2rem;
+      color: #0056b3;
+      border-bottom: 2px solid #e9ecef; /* Linha sutil para separar o título */
+      padding-bottom: 0.8rem;
       margin-bottom: 1.5rem;
+      font-weight: 500;
     }
 
     .project {
       margin-bottom: 2.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px dashed #eee;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #e9ecef; /* Linha divisória sutil entre projetos */
     }
 
     .project:last-child {
@@ -80,52 +88,72 @@
     }
 
     .project h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.7rem;
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+      color: #212529; /* Cor mais escura para o título do projeto */
     }
 
     .project a {
-      color: #0056b3; /* Um azul um pouco mais vibrante para links */
+      color: #007bff; /* Azul padrão para links */
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
     .project a:hover {
-      color: #007bff;
+      color: #0056b3;
       text-decoration: underline;
+    }
+
+    .project ul {
+      list-style: none; /* Remove bolinhas padrão da lista */
+      padding-left: 0;
+      margin-top: 1rem;
+    }
+
+    .project ul li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project ul li::before {
+      content: '•'; /* Adiciona um marcador de lista personalizado */
+      color: #007bff;
+      font-size: 1.2em;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
 
     .project-img {
       max-width: 100%;
       height: auto;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-      margin-top: 1rem;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .project-img:hover {
-      transform: translateY(-5px);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 1.5rem;
+      display: block; /* Garante que a imagem ocupe sua própria linha */
     }
 
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.7rem; /* Espaçamento maior entre as skills */
-      margin-top: 1rem;
+      gap: 0.8rem;
+      margin-top: 1.5rem;
     }
 
     .skill {
-      background: #0056b3; /* Azul mais forte para os botões de skill */
-      color: white;
+      background-color: #e9ecef; /* Fundo claro para a skill */
+      color: #0056b3; /* Texto azul para a skill */
       padding: 0.6rem 1.2rem;
-      border-radius: 25px; /* Bordas mais arredondadas */
+      border-radius: 5px; /* Bordas levemente arredondadas */
       font-size: 0.95rem;
-      transition: background-color 0.3s ease;
+      font-weight: 500;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .skill:hover {
-      background-color: #007bff;
+      background-color: #0056b3;
+      color: white;
     }
 
     .contact-info p {
@@ -134,23 +162,65 @@
     }
 
     .contact-info a {
-      color: #0056b3;
+      color: #007bff;
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
     .contact-info a:hover {
-      color: #007bff;
+      color: #0056b3;
       text-decoration: underline;
     }
 
     footer {
       text-align: center;
-      padding: 1.5rem;
-      background-color: #004080; /* Cor do header para o footer também */
+      padding: 2rem;
+      background-color: #343a40; /* Fundo cinza escuro para o footer */
       color: white;
       font-size: 0.9rem;
-      margin-top: 3rem;
+      margin-top: 4rem;
+    }
+
+    /* Media Queries para Responsividade */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+      .project h3 {
+        font-size: 1.5rem;
+      }
+      main {
+        padding: 0 1rem;
+      }
+      section {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 2rem 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      .skill {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
