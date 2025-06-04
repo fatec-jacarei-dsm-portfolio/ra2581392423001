@@ -1,303 +1,256 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio - Gustavo Silva Dos Reis</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <style>
-    /* Reset básico para consistência entre navegadores */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio - Gustavo Silva Dos Reis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #00bcd4;
+      --background: #121212;
+      --surface: #1e1e1e;
+      --text: #f1f1f1;
+      --muted: #aaaaaa;
+    }
 
-    body {
-      font-family: 'Roboto', sans-serif; /* Fonte mais clean e legível */
-      background-color: #f8f9fa; /* Fundo muito claro, quase branco */
-      color: #343a40; /* Texto em tom de cinza escuro para contraste */
-      line-height: 1.6;
-      overflow-x: hidden; /* Evita scroll horizontal em caso de elementos grandes */
-    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    header {
-      background-color: #0056b3; /* Um azul um pouco mais vivo, mas profissional */
-      color: white;
-      padding: 3rem 1.5rem;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra suave */
-      border-bottom-left-radius: 15px; /* Bordas arredondadas na parte inferior */
-      border-bottom-right-radius: 15px;
-    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-    .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid white;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para a imagem de perfil */
-    }
+    header {
+      background: linear-gradient(145deg, #00bcd4, #007b8a);
+      padding: 3rem 1rem;
+      text-align: center;
+      color: white;
+    }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      font-weight: 700; /* Mais negrito para o título */
-    }
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      margin-bottom: 1rem;
+    }
 
-    header p {
-      font-size: 1.3rem;
-      opacity: 0.95;
-      font-weight: 300; /* Mais leve para a descrição */
-    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.3rem;
+    }
 
-    main {
-      max-width: 960px; /* Largura um pouco maior para o conteúdo principal */
-      margin: 3rem auto;
-      padding: 0 2rem;
-    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
 
-    section {
-      background-color: white;
-      padding: 2.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.08); /* Sombra suave para as seções */
-      margin-bottom: 3rem;
-      border-left: 5px solid #0056b3; /* Linha azul no lado esquerdo da seção */
-    }
+    main {
+      max-width: 960px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
 
-    h2 {
-      font-size: 2.2rem;
-      color: #0056b3;
-      border-bottom: 2px solid #e9ecef; /* Linha sutil para separar o título */
-      padding-bottom: 0.8rem;
-      margin-bottom: 1.5rem;
-      font-weight: 500;
-    }
+    section {
+      background-color: var(--surface);
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
 
-    .project {
-      margin-bottom: 2.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid #e9ecef; /* Linha divisória sutil entre projetos */
-    }
+    h2 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
 
-    .project:last-child {
-      border-bottom: none;
-    }
+    .project h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
 
-    .project h3 {
-      font-size: 1.8rem;
-      margin-bottom: 0.8rem;
-      color: #212529; /* Cor mais escura para o título do projeto */
-    }
+    .project a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
 
-    .project a {
-      color: #007bff; /* Azul padrão para links */
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
+    .project a:hover {
+      text-decoration: underline;
+      color: #66e0ef;
+    }
 
-    .project a:hover {
-      color: #0056b3;
-      text-decoration: underline;
-    }
+    .project ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 1rem;
+    }
 
-    .project ul {
-      list-style: none; /* Remove bolinhas padrão da lista */
-      padding-left: 0;
-      margin-top: 1rem;
-    }
+    .project ul li::before {
+      content: "➤";
+      color: var(--primary);
+      margin-right: 0.5rem;
+    }
 
-    .project ul li {
-      position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
+    .project ul li {
+      margin-bottom: 0.5rem;
+    }
 
-    .project ul li::before {
-      content: '•'; /* Adiciona um marcador de lista personalizado */
-      color: #007bff;
-      font-size: 1.2em;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
+    .project-img {
+      max-width: 100%;
+      margin-top: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
 
-    .project-img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-top: 1.5rem;
-      display: block; /* Garante que a imagem ocupe sua própria linha */
-    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 1rem;
+    }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-top: 1.5rem;
-    }
+    .skill {
+      background-color: #2c2c2c;
+      color: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
 
-    .skill {
-      background-color: #e9ecef; /* Fundo claro para a skill */
-      color: #0056b3; /* Texto azul para a skill */
-      padding: 0.6rem 1.2rem;
-      border-radius: 5px; /* Bordas levemente arredondadas */
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+    .skill:hover {
+      background-color: var(--primary);
+      color: var(--background);
+    }
 
-    .skill:hover {
-      background-color: #0056b3;
-      color: white;
-    }
+    .contact-info p, .contact-info a {
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+    }
 
-    .contact-info p {
-      margin-bottom: 0.8rem;
-      font-size: 1.1rem;
-    }
+    .contact-info a {
+      color: var(--primary);
+      text-decoration: none;
+    }
 
-    .contact-info a {
-      color: #007bff;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
 
-    .contact-info a:hover {
-      color: #0056b3;
-      text-decoration: underline;
-    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #343a40; /* Fundo cinza escuro para o footer */
-      color: white;
-      font-size: 0.9rem;
-      margin-top: 4rem;
-    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
 
-    /* Media Queries para Responsividade */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-      h2 {
-        font-size: 1.8rem;
-      }
-      .project h3 {
-        font-size: 1.5rem;
-      }
-      main {
-        padding: 0 1rem;
-      }
-      section {
-        padding: 1.5rem;
-      }
-    }
+      h2 {
+        font-size: 1.5rem;
+      }
 
-    @media (max-width: 480px) {
-      header {
-        padding: 2rem 1rem;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-      .profile-pic {
-        width: 120px;
-        height: 120px;
-      }
-      h2 {
-        font-size: 1.5rem;
-      }
-      .skill {
-        padding: 0.5rem 1rem;
-        font-size: 0.85rem;
-      }
-    }
-  </style>
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+
+      .project h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <img src="./images/foto.jpeg" alt="Foto de Perfil de Gustavo Silva Dos Reis" class="profile-pic" />
-  <h1>Gustavo Silva Dos Reis</h1>
-  <p>Estudante de Desenvolvimento de Software Multiplataforma - FATEC Jacareí</p>
-</header>
+  <header>
+    <img src="./images/foto.jpeg" alt="Foto de Perfil de Gustavo Silva Dos Reis" class="profile-pic" />
+    <h1>Gustavo Silva Dos Reis</h1>
+    <p>Estudante de Desenvolvimento de Software Multiplataforma - FATEC Jacareí</p>
+  </header>
 
-<main>
-  <section>
-    <h2>Apresentação</h2>
-    <p>Olá! Sou <strong>Gustavo Silva Dos Reis</strong>, estudante da FATEC Jacareí no curso de Desenvolvimento de Software Multiplataforma. Minha paixão é transformar ideias em soluções digitais, e durante minha formação, tive a oportunidade de participar de projetos acadêmicos desafiadores que me permitiram aprimorar habilidades práticas em **programação, desenvolvimento web e trabalho em equipe**.</p>
-    <p>Busco constantemente aprender e aplicar as melhores práticas do mercado, com foco em criar aplicações eficientes e inovadoras.</p>
-  </section>
+  <main>
+    <section>
+      <h2>Apresentação</h2>
+      <p>Olá! Sou <strong>Gustavo Silva Dos Reis</strong>, estudante da FATEC Jacareí no curso de Desenvolvimento de Software Multiplataforma. Minha paixão é transformar ideias em soluções digitais, e durante minha formação, tive a oportunidade de participar de projetos acadêmicos desafiadores que me permitiram aprimorar habilidades práticas em <strong>programação, desenvolvimento web e trabalho em equipe</strong>.</p>
+      <p>Busco constantemente aprender e aplicar as melhores práticas do mercado, com foco em criar aplicações eficientes e inovadoras.</p>
+    </section>
 
-  <section>
-    <h2>Projetos Acadêmicos</h2>
+    <section>
+      <h2>Projetos Acadêmicos</h2>
 
-    <div class="project">
-      <h3><a href="https://github.com/CodeGators/CodeGators---Front-Server" target="_blank">WildFireExplorer - Github</a></h3>
-      <p>Neste projeto, atuei primariamente como **Desenvolvedor Backend**, responsável pela construção e otimização das APIs que fornecem dados ambientais e focos de incêndio florestal. Minhas contribuições incluíram:</p>
-      <ul>
-        <li>Desenvolvimento de **endpoints robustos** utilizando **Node.js e Express**.</li>
-        <li>Integração com **PostgreSQL** e extensões espaciais como **PostGIS** para manipulação e consulta eficiente de dados geográficos.</li>
-        <li>Garantia da **integridade e performance** do banco de dados, otimizando consultas para uma experiência fluida no frontend.</li>
-      </ul>
-      <img src="./images/print2.png" alt="Print do projeto WildFireExplorer" class="project-img">
-    </div>
-    
-    <div class="project">
-      <h3><a href="https://github.com/DevsScrumAcademy/1-DSM---DevsAcademy" target="_blank">DevsScrumAcademy - GitHub</a></h3>
-      <p>Como **Desenvolvedor Frontend** neste projeto colaborativo, meu foco foi na criação de interfaces de usuário intuitivas e responsivas. Minhas principais responsabilidades incluíram:</p>
-      <ul>
-        <li>Implementação de layouts dinâmicos e componentes interativos usando **HTML5, CSS3 e JavaScript**.</li>
-        <li>Colaboração ativa com a equipe para garantir a integração harmoniosa entre frontend e backend.</li>
-        <li>Aplicação de princípios de **design responsivo** para assegurar a compatibilidade em diferentes dispositivos.</li>
-      </ul>
-      <img src="./images/print1.png" alt="Print do projeto Devsscrumacademy" class="project-img">
-    </div>
-</section>
-   
+      <div class="project">
+        <h3><a href="https://github.com/CodeGators/CodeGators---Front-Server" target="_blank">WildFireExplorer - Github</a></h3>
+        <p>Neste projeto, atuei primariamente como <strong>Desenvolvedor Backend</strong>, responsável pela construção e otimização das APIs que fornecem dados ambientais e focos de incêndio florestal. Minhas contribuições incluíram:</p>
+        <ul>
+          <li>Desenvolvimento de <strong>endpoints robustos</strong> utilizando <strong>Node.js e Express</strong>.</li>
+          <li>Integração com <strong>PostgreSQL</strong> e extensões espaciais como <strong>PostGIS</strong>.</li>
+          <li>Otimização de consultas para performance no frontend.</li>
+        </ul>
+        <img src="./images/print2.png" alt="Print do projeto WildFireExplorer" class="project-img">
+      </div>
 
-  <section>
-    <h2>Habilidades e Tecnologias</h2>
-    <div class="skills">
-      <span class="skill">HTML5</span>
-      <span class="skill">CSS3</span>
-      <span class="skill">JavaScript</span>
-      <span class="skill">React</span>
-      <span class="skill">Node.js</span>
-      <span class="skill">Express</span>
-      <span class="skill">PostgreSQL</span>
-      <span class="skill">PostGIS</span>
-      <span class="skill">Git</span>
-      <span class="skill">GitHub</span>
-    </div>
-  </section>
+      <div class="project">
+        <h3><a href="https://github.com/DevsScrumAcademy/1-DSM---DevsAcademy" target="_blank">DevsScrumAcademy - GitHub</a></h3>
+        <p>Como <strong>Desenvolvedor Frontend</strong>, foquei em interfaces de usuário intuitivas. Responsabilidades:</p>
+        <ul>
+          <li>Implementação com <strong>HTML5, CSS3 e JavaScript</strong>.</li>
+          <li>Colaboração com o backend e integração de APIs.</li>
+          <li>Design responsivo e compatível com dispositivos variados.</li>
+        </ul>
+        <img src="./images/print1.png" alt="Print do projeto Devsscrumacademy" class="project-img">
+      </div>
+    </section>
 
-  <section>
-    <h2>Outras Informações</h2>
-    <p>Tenho grande interesse em desenvolvimento **full stack**, com um foco especial em construir aplicações web modernas e eficientes. Estou sempre buscando aprimorar minhas habilidades e **contribuir ativamente** em projetos colaborativos, aprendendo com cada desafio e aplicando soluções inovadoras. Meu objetivo é crescer profissionalmente e fazer a diferença através da tecnologia.</p>
-  </section>
+    <section>
+      <h2>Habilidades e Tecnologias</h2>
+      <div class="skills">
+        <span class="skill">HTML5</span>
+        <span class="skill">CSS3</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">React</span>
+        <span class="skill">Node.js</span>
+        <span class="skill">Express</span>
+        <span class="skill">PostgreSQL</span>
+        <span class="skill">PostGIS</span>
+        <span class="skill">Git</span>
+        <span class="skill">GitHub</span>
+      </div>
+    </section>
 
-  <section class="contact-info">
-    <h2>Contato</h2>
-    <p>Sinta-se à vontade para entrar em contato para oportunidades, colaborações ou apenas para trocar ideias!</p>
-    <p>Email: <a href="mailto:gustavosilva12323@hotmail.com">gustavosilva12323@hotmail.com</a></p>
-    <p>Telefone (Celular): +55 11 97847-3249</p>
-  </section>
-</main>
+    <section>
+      <h2>Outras Informações</h2>
+      <p>Tenho grande interesse em desenvolvimento <strong>full stack</strong>, com um foco especial em construir aplicações web modernas e eficientes. Estou sempre buscando aprimorar minhas habilidades e <strong>contribuir ativamente</strong> em projetos colaborativos, aprendendo com cada desafio e aplicando soluções inovadoras.</p>
+    </section>
 
-<footer>
-  &copy; 2025 - Gustavo Silva Dos Reis - FATEC Jacareí. Todos os direitos reservados.
-</footer>
+    <section class="contact-info">
+      <h2>Contato</h2>
+      <p>Sinta-se à vontade para entrar em contato para oportunidades, colaborações ou apenas para trocar ideias!</p>
+      <p>Email: <a href="mailto:gustavosilva12323@hotmail.com">gustavosilva12323@hotmail.com</a></p>
+      <p>Telefone (Celular): +55 11 97847-3249</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 - Gustavo Silva Dos Reis - FATEC Jacareí. Todos os direitos reservados.
+  </footer>
 
 </body>
 </html>
