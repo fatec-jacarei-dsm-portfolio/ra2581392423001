@@ -1,153 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio - Estudante FATEC</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-      color: #333;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio - Estudante FATEC</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      margin-bottom: 1rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid #004080;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .project {
+      margin-bottom: 2rem;
+    }
+
+    .project a {
+      color: #004080;
+      text-decoration: none;
+    }
+
+    .project-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 0.5rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill {
+      background: #004080;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+    }
+    
+    .contact-info p {
+      margin-bottom: 0.5rem;
     }
 
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    .profile-pic {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid white;
-      margin-bottom: 1rem;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    section {
-      margin-bottom: 2.5rem;
-    }
-
-    h2 {
-      border-bottom: 2px solid #004080;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    .project {
-      margin-bottom: 2rem;
-    }
-
-    .project a {
-      color: #004080;
-      text-decoration: none;
-    }
-
-    .project-img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 0.5rem;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .skill {
-      background: #004080;
-      color: white;
-      padding: 0.4rem 0.8rem;
-      border-radius: 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #ddd;
-      font-size: 0.9rem;
-      color: #444;
-    }
-  </style>
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ddd;
+      font-size: 0.9rem;
+      color: #444;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <!-- "foto.jpg"-->
-  
-  <h1>Portfólio Acadêmico</h1>
-  <img src="./images/foto.jpeg" alt="Foto de Perfil" class="profile-pic" />
-  <p>Estudante de Desenvolvimento de Software - FATEC Jacareí</p>
+    
+  <h1>Portfólio Acadêmico de Gustavo Silva Dos Reis</h1>
+  <img src="./images/foto.jpeg" alt="Foto de Perfil" class="profile-pic" />
+  <p>Estudante de Desenvolvimento de Software - FATEC Jacareí</p>
 </header>
 
 <main>
-  <section>
-    <h2>Apresentação</h2>
-    <p>Olá! Sou estudante da FATEC Jacareí no curso de Desenvolvimento de Software Multiplataforma. Estou em fase de formação e tive experiências acadêmicas importantes que me permitiram desenvolver habilidades práticas em programação e desenvolvimento web.</p>
-  </section>
+  <section>
+    <h2>Apresentação</h2>
+    <p>Olá! Sou estudante da FATEC Jacareí no curso de Desenvolvimento de Software Multiplataforma. Estou em fase de formação e tive experiências acadêmicas importantes que me permitiram desenvolver habilidades práticas em programação e desenvolvimento web.</p>
+  </section>
 
-  <section>
-    <h2>Projetos Acadêmicos</h2>
+  <section>
+    <h2>Projetos Acadêmicos</h2>
 
-    
- <div class="project">
-      <h3><a href="https://github.com/CodeGators/CodeGators---Front-Server" target="_blank">WildFireExplorer - Github</a></h3>
-      <p>Aplicação que explora dados ambientais e focos de incêndio florestal com interface interativa. Desenvolvido com tecnologias modernas de front-end.</p>
-      <!-- "print2.png" -->
-      <img src="./images/print2.png" alt="Print do projeto WildFireExplorer" class="project-img">
-    </div>
-    
-  <div class="project">
-      <h3><a href="https://github.com/DevsScrumAcademy/1-DSM---DevsAcademy" target="_blank">DevsScrumAcademy - GitHub</a></h3>
-      <p>Projeto acadêmico colaborativo focado em práticas ágeis e desenvolvimento web. Envolveu trabalho em equipe e versionamento com GitHub.</p>
-      <!-- "print1.png" -->
-      <img src="./images/print1.png" alt="Print do projeto Devsscrumacademy" class="project-img">
-    </div>
+    
+ <div class="project">
+      <h3><a href="https://github.com/CodeGators/CodeGators---Front-Server" target="_blank">WildFireExplorer - Github</a> (Desenvolvedor Backend)</h3>
+      <p>Aplicação que explora dados ambientais e focos de incêndio florestal com interface interativa. Desenvolvido com tecnologias modernas de front-end.</p>
+            <img src="./images/print2.png" alt="Print do projeto WildFireExplorer" class="project-img">
+    </div>
+    
+  <div class="project">
+      <h3><a href="https://github.com/DevsScrumAcademy/1-DSM---DevsAcademy" target="_blank">DevsScrumAcademy - GitHub</a> (Desenvolvedor Frontend)</h3>
+      <p>Projeto acadêmico colaborativo focado em práticas ágeis e desenvolvimento web. Envolveu trabalho em equipe e versionamento com GitHub.</p>
+            <img src="./images/print1.png" alt="Print do projeto Devsscrumacademy" class="project-img">
+    </div>
 </section>
-   
+   
 
-  <section>
-    <h2>Habilidades e Tecnologias</h2>
-    <div class="skills">
-      <span class="skill">HTML5</span>
-      <span class="skill">CSS3</span>
-      <span class="skill">JavaScript</span>
-      <span class="skill">React</span>
-      <span class="skill">Node.js</span>
-      <span class="skill">Express</span>
-      <span class="skill">PostgreSQL</span>
-      <span class="skill">PostGIS</span>
-      <span class="skill">Git</span>
-      <span class="skill">GitHub</span>
-    </div>
-  </section>
+  <section>
+    <h2>Habilidades e Tecnologias</h2>
+    <div class="skills">
+      <span class="skill">HTML5</span>
+      <span class="skill">CSS3</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">React</span>
+      <span class="skill">Node.js</span>
+      <span class="skill">Express</span>
+      <span class="skill">PostgreSQL</span>
+      <span class="skill">PostGIS</span>
+      <span class="skill">Git</span>
+      <span class="skill">GitHub</span>
+    </div>
+  </section>
 
-  <section>
-    <h2>Outras Informações</h2>
-    <p>Tenho interesse em desenvolvimento full stack, com foco em aplicações web modernas. Estou sempre buscando aprender mais e contribuir com projetos colaborativos.</p>
-  </section>
+  <section>
+    <h2>Outras Informações</h2>
+    <p>Tenho interesse em desenvolvimento full stack, com foco em aplicações web modernas. Estou sempre buscando aprender mais e contribuir com projetos colaborativos.</p>
+  </section>
+
+  <section class="contact-info">
+    <h2>Contato</h2>
+    <p>Email: <a href="mailto:gustavosilva12323@hotmail.com">gustavosilva12323@hotmail.com</a></p>
+    <p>Telefone (Celular): +55 11 97847-3249</p>
+  </section>
 </main>
 
 <footer>
-  &copy; 2025 - Estudante FATEC Jacareí
+  &copy; 2025 - Gustavo Silva Dos Reis - FATEC Jacareí
 </footer>
 
 </body>
