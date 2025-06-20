@@ -1,171 +1,273 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio - Estudante FATEC</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo Reis | Desenvolvedor de Software</title>
 
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    .profile-pic {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid white;
-      margin-bottom: 1rem;
-    }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
+    <style>
+        /* Estilos personalizados para a estética cyberpunk */
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+        }
 
-    section {
-      margin-bottom: 2.5rem;
-    }
+        /* Fontes customizadas */
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
 
-    h2 {
-      border-bottom: 2px solid #004080;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
+        /* Efeito de brilho sutil */
+        .neon-glow-cyan {
+            box-shadow: 0 0 5px rgba(0, 255, 255, 0.3), 0 0 10px rgba(0, 255, 255, 0.2), 0 0 15px rgba(0, 255, 255, 0.1);
+        }
+        
+        .neon-glow-pink {
+            box-shadow: 0 0 5px rgba(255, 0, 150, 0.3), 0 0 10px rgba(255, 0, 150, 0.2), 0 0 15px rgba(255, 0, 150, 0.1);
+        }
 
-    ul {
-      padding-left: 1.2rem;
-    }
+        .text-shadow-cyan {
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+        }
 
-    .project {
-      margin-bottom: 2rem;
-    }
+        /* Efeito de glitch no hover (sutil) */
+        .glitch-hover:hover {
+            text-shadow: 2px 2px 0px #ff0055, -2px -2px 0px #00ffff;
+            transition: all 0.2s;
+        }
+        
+        /* Barra de rolagem customizada */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00ffff;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff0055;
+        }
 
-    .project a {
-      color: #004080;
-      text-decoration: none;
-    }
+        /* Animação de digitação */
+        .typing-effect {
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #00ffff;
+            animation: typing 3s steps(30, end) forwards, blink 1s infinite;
+        }
 
-    .project-img {
-    max-width: 100%; 
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-top: 0.5rem;
-    margin-left: -20px; 
-    display: block; 
-}
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .skill {
-      background: #004080;
-      color: white;
-      padding: 0.4rem 0.8rem;
-      border-radius: 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #ddd;
-      font-size: 0.9rem;
-      color: #444;
-    }
-  </style>
+        @keyframes blink {
+            0%, 100% { border-color: transparent }
+            50% { border-color: #00ffff }
+        }
+    </style>
 </head>
-<body>
+<body class="bg-[#0a0a1a] selection:bg-cyan-400 selection:text-black">
 
-  <header>
-      
-    <h1>Portfólio Acadêmico de Gustavo Silva Dos Reis</h1>
-    <img src="./images/foto.jpeg" alt="Foto de Perfil de Gustavo Silva Dos Reis" class="profile-pic" />
-    <p>Estudante de Desenvolvimento de Software Multiplataforma - FATEC Jacareí</p>
-  </header>
-  
-  <main>
-    <section>
-      <h2>Apresentação</h2>
-      <p>Olá! Sou <strong>Gustavo Silva Dos Reis</strong>, estudante da FATEC Jacareí no curso de Desenvolvimento de Software Multiplataforma. Minha paixão é transformar ideias em soluções digitais, e durante minha formação, tive a oportunidade de participar de projetos acadêmicos desafiadores que me permitiram aprimorar habilidades práticas em **programação, desenvolvimento web e trabalho em equipe**.</p>
-      <p>Busco constantemente aprender e aplicar as melhores práticas do mercado, com foco em criar aplicações eficientes e inovadoras.</p>
-    </section>
-  
-    <section>
-      <h2>Projetos Acadêmicos</h2>
-  
-      
-    <div class="project">
-        <h3><a href="https://github.com/CodeGators/CodeGators---Front-Server" target="_blank">WildFireExplorer - Github</a></h3>
-        <p>Neste projeto, atuei primariamente como **Desenvolvedor Backend**, responsável pela construção e otimização das APIs que fornecem dados ambientais e focos de incêndio florestal. Minhas contribuições incluíram:</p>
-        <ul>
-          <li>Desenvolvimento de **endpoints robustos** utilizando **Node.js e Express**.</li>
-          <li>Integração com **PostgreSQL** e extensões espaciais como **PostGIS** para manipulação e consulta eficiente de dados geográficos.</li>
-          <li>Garantia da **integridade e performance** do banco de dados, otimizando consultas para uma experiência fluida no frontend.</li>
-        </ul>
-              <img src="./images/print2.png" alt="Print do projeto WildFireExplorer" class="project-img">
-      </div>
-      
-    <div class="project">
-        <h3><a href="https://github.com/DevsScrumAcademy/1-DSM---DevsAcademy" target="_blank">DevsScrumAcademy - GitHub</a></h3>
-        <p>Como **Desenvolvedor Frontend** neste projeto colaborativo, meu foco foi na criação de interfaces de usuário intuitivas e responsivas. Minhas principais responsabilidades incluíram:</p>
-        <ul>
-          <li>Implementação de layouts dinâmicos e componentes interativos usando **HTML5, CSS3 e JavaScript**.</li>
-          <li>Colaboração ativa com a equipe para garantir a integração harmoniosa entre frontend e backend.</li>
-          <li>Aplicação de princípios de **design responsivo** para assegurar a compatibilidade em diferentes dispositivos.</li>
-        </ul>
-              <img src="./images/print1.png" alt="Print do projeto Devsscrumacademy" class="project-img">
-      </div>
-  </section>
-     
-  
-    <section>
-      <h2>Habilidades e Tecnologias</h2>
-      <div class="skills">
-        <span class="skill">HTML5</span>
-        <span class="skill">CSS3</span>
-        <span class="skill">JavaScript</span>
-        <span class="skill">React</span>
-        <span class="skill">Node.js</span>
-        <span class="skill">Express</span>
-        <span class="skill">PostgreSQL</span>
-        <span class="skill">PostGIS</span>
-        <span class="skill">Git</span>
-        <span class="skill">GitHub</span>
-      </div>
-    </section>
-  
-    <section>
-      <h2>Outras Informações</h2>
-      <p>Tenho interesse em desenvolvimento full stack, com foco em aplicações web modernas. Estou sempre buscando aprender mais e contribuir com projetos colaborativos.</p>
-    </section>
-  
-    <section class="contact-info">
-      <h2>Contato</h2>
-      <p>Sinta-se à vontade para entrar em contato para oportunidades, colaborações ou apenas para trocar ideias!</p>
-      <p>Email: <a href="mailto:gustavosilva12323@hotmail.com">gustavosilva12323@hotmail.com</a></p>
-      <p>Telefone (Celular): +55 11 97847-3249</p>
-    </section>
-  </main>
-  
-  <footer>
-    &copy; 2025 - Gustavo Silva Dos Reis - FATEC Jacareí
-  </footer>
-  
-  </body>
+    <!-- Cabeçalho -->
+    <header class="bg-black/30 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-cyan-400/20">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="font-orbitron text-xl font-bold text-white glitch-hover flex items-center gap-2">
+                <i class="ph ph-crown-simple text-cyan-400 text-2xl"></i>
+                <span>GUSTAVO.REIS</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">SOBRE</a>
+                <a href="#education" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">FORMAÇÃO</a>
+                <a href="#projects" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">PROJETOS</a>
+                <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">CONTATO</a>
+            </nav>
+            <button id="menu-btn" class="md:hidden text-white">
+                <i class="ph ph-list text-3xl"></i>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/50">
+            <a href="#about" class="block text-center py-3 text-gray-300 hover:bg-cyan-400/20 transition-colors">SOBRE</a>
+            <a href="#education" class="block text-center py-3 text-gray-300 hover:bg-cyan-400/20 transition-colors">FORMAÇÃO</a>
+            <a href="#projects" class="block text-center py-3 text-gray-300 hover:bg-cyan-400/20 transition-colors">PROJETOS</a>
+            <a href="#contact" class="block text-center py-3 text-gray-300 hover:bg-cyan-400/20 transition-colors">CONTATO</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <!-- Seção Home -->
+        <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center pt-20">
+            <img src="https://raw.githubusercontent.com/fatec-jacarei-dsm-portfolio/ra2581392423001/main/docs/images/foto.jpeg" 
+                 alt="Foto de Perfil de Gustavo Reis" 
+                 class="w-40 h-40 rounded-full object-cover border-4 border-cyan-400 neon-glow-cyan mb-6"
+                 onerror="this.onerror=null;this.src='https://placehold.co/160x160/0a0a1a/e0e0e0?text=GR';">
+            <h1 class="font-orbitron text-4xl md:text-6xl font-bold text-white text-shadow-cyan">
+                Gustavo Silva Dos Reis
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mt-4">
+                <span class="typing-effect">Desenvolvedor de Software Multiplataforma</span>
+            </p>
+            <div class="mt-8 flex gap-4">
+                <a href="https://github.com/GustavoReis-xml" target="_blank" class="text-gray-300 hover:text-pink-500 transition-colors duration-300"><i class="ph ph-github-logo text-4xl"></i></a>
+                <a href="mailto:gustavosilva12323@hotmail.com" class="text-gray-300 hover:text-pink-500 transition-colors duration-300"><i class="ph ph-envelope-simple text-4xl"></i></a>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="about" class="py-24">
+            <h2 class="font-orbitron text-3xl font-bold text-center mb-12 text-cyan-400 text-shadow-cyan">SOBRE MIM</h2>
+            <div class="grid md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-3 text-lg text-gray-300 leading-relaxed">
+                    <p>Olá! Sou Gustavo, um entusiasta de tecnologia e estudante de <strong class="text-white">Desenvolvimento de Software Multiplataforma</strong> na FATEC Jacareí. Minha paixão é transformar ideias e desafios em soluções digitais eficientes e inovadoras.</p>
+                    <p class="mt-4">Durante minha jornada acadêmica, participei ativamente de projetos que me permitiram aprofundar meus conhecimentos em <strong class="text-white">programação, desenvolvimento web e metodologias ágeis</strong>, sempre buscando aplicar as melhores práticas do mercado.</p>
+                </div>
+                <div class="md:col-span-2">
+                    <h3 class="font-orbitron text-2xl font-bold text-white mb-4">Habilidades</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-pill bg-cyan-400/10 text-cyan-300 border border-cyan-400/30 px-3 py-1 rounded">HTML5</span>
+                        <span class="skill-pill bg-cyan-400/10 text-cyan-300 border border-cyan-400/30 px-3 py-1 rounded">CSS3</span>
+                        <span class="skill-pill bg-cyan-400/10 text-cyan-300 border border-cyan-400/30 px-3 py-1 rounded">JavaScript</span>
+                        <span class="skill-pill bg-cyan-400/10 text-cyan-300 border border-cyan-400/30 px-3 py-1 rounded">React</span>
+                        <span class="skill-pill bg-cyan-400/10 text-cyan-300 border border-cyan-400/30 px-3 py-1 rounded">Node.js</span>
+                        <span class="skill-pill bg-cyan-400/10 text-cyan-300 border border-cyan-400/30 px-3 py-1 rounded">Express</span>
+                        <span class="skill-pill bg-cyan-400/10 text-cyan-300 border border-cyan-400/30 px-3 py-1 rounded">PostgreSQL</span>
+                        <span class="skill-pill bg-cyan-400/10 text-cyan-300 border border-cyan-400/30 px-3 py-1 rounded">PostGIS</span>
+                        <span class="skill-pill bg-cyan-400/10 text-cyan-300 border border-cyan-400/30 px-3 py-1 rounded">Git</span>
+                        <span class="skill-pill bg-cyan-400/10 text-cyan-300 border border-cyan-400/30 px-3 py-1 rounded">GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Formação Acadêmica -->
+        <section id="education" class="py-24 bg-black/20">
+            <h2 class="font-orbitron text-3xl font-bold text-center mb-12 text-cyan-400 text-shadow-cyan">FORMAÇÃO ACADÊMICA</h2>
+            <div class="max-w-3xl mx-auto text-center md:text-left">
+                <div class="text-gray-300">
+                    <h3 class="font-orbitron text-2xl text-pink-400 mb-2">Desenvolvimento de Software Multiplataforma</h3>
+                    <p class="text-lg font-semibold text-white">FATEC Jacareí</p>
+                    <p class="text-md text-cyan-400 mb-4">2024 - 2027 (Previsão)</p>
+                    <p class="leading-relaxed">Curso superior de tecnologia focado em preparar profissionais para projetar, desenvolver e testar softwares para diversas plataformas, incluindo web, mobile, desktop e sistemas em nuvem.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Seção Projetos -->
+        <section id="projects" class="py-24">
+            <h2 class="font-orbitron text-3xl font-bold text-center mb-12 text-cyan-400 text-shadow-cyan">PROJETOS ACADEMICOS</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Projeto 1 -->
+                <div class="project-card flex flex-col bg-gray-900/50 border border-pink-500/20 p-6 rounded-lg hover:border-pink-500 hover:scale-[1.02] transition-all duration-300">
+                    <img src="https://raw.githubusercontent.com/fatec-jacarei-dsm-portfolio/ra2581392423001/main/docs/images/print2.png" alt="Print do projeto WildFireExplorer" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1f2937/9ca3af?text=WildFireExplorer';">
+                    <div class="flex-grow flex flex-col">
+                        <h3 class="font-orbitron text-xl font-bold text-pink-400">WildFireExplorer</h3>
+                        <p class="text-gray-400 mt-2 mb-4 flex-grow">API para monitoramento de focos de incêndio, fornecendo dados para análise ambiental e conscientização pública.</p>
+                        <p class="font-bold text-white mb-2">Minha Atuação (Dev Backend):</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-1 mb-4">
+                            <li>Desenvolvimento de endpoints robustos com Node.js e Express.</li>
+                            <li>Integração com PostgreSQL/PostGIS para dados geográficos.</li>
+                            <li>Otimização de consultas para performance da API.</li>
+                        </ul>
+                        <a href="https://github.com/CodeGators/CodeGators---Front-Server" target="_blank" class="mt-auto inline-block text-pink-400 hover:text-white font-bold transition-colors">Ver no GitHub <i class="ph ph-arrow-square-out"></i></a>
+                    </div>
+                </div>
+                <!-- Projeto 2 -->
+                <div class="project-card flex flex-col bg-gray-900/50 border border-pink-500/20 p-6 rounded-lg hover:border-pink-500 hover:scale-[1.02] transition-all duration-300">
+                    <img src="https://raw.githubusercontent.com/fatec-jacarei-dsm-portfolio/ra2581392423001/main/docs/images/print1.png" alt="Print do projeto DevsScrumAcademy" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1f2937/9ca3af?text=DevsScrumAcademy';">
+                    <div class="flex-grow flex flex-col">
+                        <h3 class="font-orbitron text-xl font-bold text-pink-400">DevsScrumAcademy</h3>
+                        <p class="text-gray-400 mt-2 mb-4 flex-grow">Plataforma educacional colaborativa para ensino de metodologias ágeis.</p>
+                        <p class="font-bold text-white mb-2">Minha Atuação (Dev Frontend):</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-1 mb-4">
+                            <li>Implementação de layouts dinâmicos com HTML5, CSS3 e JS.</li>
+                            <li>Criação de componentes interativos e responsivos.</li>
+                            <li>Colaboração para integrar a interface com o backend.</li>
+                        </ul>
+                        <a href="https://github.com/DevsScrumAcademy/1-DSM---DevsAcademy" target="_blank" class="mt-auto inline-block text-pink-400 hover:text-white font-bold transition-colors">Ver no GitHub <i class="ph ph-arrow-square-out"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contact" class="py-24 text-center">
+            <h2 class="font-orbitron text-3xl font-bold text-center mb-4 text-cyan-400 text-shadow-cyan">ENTRE EM CONTATO</h2>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">Estou aberto a novas oportunidades, colaborações e um bom bate-papo sobre tecnologia. Sinta-se à vontade para me contatar!</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <i class="ph ph-envelope-simple text-2xl text-cyan-400"></i>
+                    <span id="email-text" class="text-white text-lg">gustavosilva12323@hotmail.com</span>
+                </div>
+                <button id="copy-email-btn" class="bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-4 py-2 rounded-md hover:bg-cyan-500/40 transition-colors">
+                    Copiar E-mail
+                </button>
+            </div>
+            <div id="copy-feedback" class="mt-4 text-pink-400 h-6"></div>
+        </section>
+    </main>
+
+    <footer class="text-center py-6 border-t border-cyan-400/20">
+        <p class="text-gray-500">&copy; 2025 Gustavo Silva Dos Reis - Construído com <span class="text-pink-500">&lt;/&gt;</span> e <i class="ph ph-coffee text-pink-500"></i></p>
+    </footer>
+
+    <script>
+        // Lógica para o menu mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fechar menu mobile ao clicar em um link
+        document.querySelectorAll('#mobile-menu a, #mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Lógica para copiar e-mail
+        const copyEmailBtn = document.getElementById('copy-email-btn');
+        const emailText = document.getElementById('email-text').innerText;
+        const copyFeedback = document.getElementById('copy-feedback');
+
+        copyEmailBtn.addEventListener('click', () => {
+            const textArea = document.createElement('textarea');
+            textArea.value = emailText;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                // Usando execCommand como fallback para ambientes restritos
+                document.execCommand('copy');
+                copyFeedback.textContent = 'E-mail copiado para a área de transferência!';
+            } catch (err) {
+                copyFeedback.textContent = 'Não foi possível copiar o e-mail.';
+                console.error('Fallback: Oops, unable to copy', err);
+            }
+            document.body.removeChild(textArea);
+
+            // Limpa a mensagem após alguns segundos
+            setTimeout(() => {
+                copyFeedback.textContent = '';
+            }, 3000);
+        });
+    </script>
+</body>
 </html>
