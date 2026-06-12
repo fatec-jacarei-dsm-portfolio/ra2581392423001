@@ -8,5 +8,8 @@
  
 ### Portfólio Online  
 🔗 [Acesse o Portfólio](https://fatec-jacarei-dsm-portfolio.github.io/ra2581392423001/)
+
+---
+
 **Vídeos de Apresentação**
 4DSM - [Vídeo](https://www.youtube.com/watch?v=rttRrGmgzWM)  
