@@ -13,4 +13,4 @@
 
 **Vídeos de Apresentação**
 
-4DSM - [Vídeo]([https://www.youtube.com/watch?v=rttRrGmgzWM])  
+4DSM - [Vídeo](https://www.youtube.com/watch?v=rttRrGmgzWM)  
