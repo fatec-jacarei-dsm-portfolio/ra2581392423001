@@ -562,10 +562,33 @@
             color: #f472b6;
         }
 
+        .role-iot {
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--accent-blue);
+        }
+
         .project-description {
             color: var(--text-secondary);
             margin-bottom: 20px;
             line-height: 1.7;
+        }
+
+        .project-contribution {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            border-left: 2px solid var(--accent-blue);
+            padding-left: 12px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .project-contribution strong {
+            color: var(--accent-blue);
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
         }
 
         .project-tags {
@@ -828,8 +851,8 @@
                             Ver Projetos
                         </a>
                         <a href="#contato" class="btn btn-secondary">
-                            <i class="fas fa-envelope"></i>
-                            Entrar em Contato
+                            <i class="fas fa-comments"></i>
+                            Conectar
                         </a>
                     </div>
                 </div>
@@ -965,6 +988,38 @@
 
             <div class="projects-grid">
                 <article class="project-card">
+                    <img src="images/Pillgator.png" alt="PillGator" class="project-image">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-type">Acadêmico</span>
+                            <span class="project-year">2026/1</span>
+                        </div>
+                        <h3 class="project-title">PillGator - Gaveta Inteligente de Medicamentos</h3>
+                        <span class="project-role role-iot">Backend & IoT Developer</span>
+                        <p class="project-description">
+                            Sistema integrado IoT para controle e dispensação segura de medicamentos através de uma gaveta física com travamento eletromecânico e acompanhamento remoto via app móvel.
+                        </p>
+                        <div class="project-contribution">
+                            <strong>Minha Contribuição:</strong>
+                            Desenvolvimento completo da API do backend com Node.js/Express, TypeScript, TypeORM e PostgreSQL, e implementação da comunicação bidirecional com o hardware via protocolo MQTT (broker e simulador).
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">TypeORM</span>
+                            <span class="tag">MQTT</span>
+                            <span class="tag">IoT</span>
+                        </div>
+                        <a href="https://github.com/CodeGators/PillGator-ABP4_DSM" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            Ver Repositório
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card">
                     <img src="images/print3.png" alt="ODIN" class="project-image">
                     <div class="project-content">
                         <div class="project-meta">
@@ -974,8 +1029,12 @@
                         <h3 class="project-title">ODIN - Geospatial Data Comparator</h3>
                         <span class="project-role role-sm">Scrum Master</span>
                         <p class="project-description">
-                            Aplicação web para resolver a complexidade de acesso a dados geoespaciais. Liderança ágil e estruturação da documentação.
+                            Aplicação web focada em simplificar o acesso, comparação e análise de dados geoespaciais obtidos de diferentes APIs do INPE.
                         </p>
+                        <div class="project-contribution">
+                            <strong>Minha Contribuição:</strong>
+                            Atuação como Scrum Master na liderança ágil do time, facilitação de cerimônias, gerenciamento de entregas e estruturação completa da documentação técnica do projeto.
+                        </div>
                         <div class="project-tags">
                             <span class="tag">Scrum</span>
                             <span class="tag">Node.js</span>
@@ -1001,8 +1060,12 @@
                         <h3 class="project-title">WildFire Explorer</h3>
                         <span class="project-role role-dev">Fullstack Developer</span>
                         <p class="project-description">
-                            Monitoramento ambiental consumindo dados do BDqueimadas. Proxy server e visualização de dados geoespaciais.
+                            Sistema de monitoramento e visualização em tempo real de queimadas e focos de calor no território brasileiro consumindo dados públicos do BDQueimadas.
                         </p>
+                        <div class="project-contribution">
+                            <strong>Minha Contribuição:</strong>
+                            Desenvolvimento fullstack, com foco principal na criação do servidor proxy em Node.js para consumo de dados geoespaciais e na renderização interativa do mapa utilizando a API do MapBox.
+                        </div>
                         <div class="project-tags">
                             <span class="tag">Node.js</span>
                             <span class="tag">Data Viz</span>
@@ -1027,8 +1090,12 @@
                         <h3 class="project-title">DevScrum Academy</h3>
                         <span class="project-role role-dev">Backend Developer</span>
                         <p class="project-description">
-                            Plataforma simulando ambiente ágil. Desenvolvimento de backend e integração de APIs em sprints.
+                            Plataforma gamificada voltada para o ensino de metodologias ágeis e simulação de rotinas de desenvolvimento de software em equipe.
                         </p>
+                        <div class="project-contribution">
+                            <strong>Minha Contribuição:</strong>
+                            Desenvolvimento backend de APIs REST com Node.js e Express, modelagem do banco de dados relacional e integração de serviços em um ambiente com entregas baseadas em sprints ágeis.
+                        </div>
                         <div class="project-tags">
                             <span class="tag">Node.js</span>
                             <span class="tag">Express</span>
@@ -1060,8 +1127,12 @@
                         <h3 class="project-title">Triggerun: O Arquivo Digital</h3>
                         <span class="project-role role-dev">Fullstack Developer</span>
                         <p class="project-description">
-                            SPA interativa para preservar a história do MMOFPS Triggerun. Engenharia reversa e visualização de dados XML.
+                            SPA interativa voltada para a preservação histórica e catalogação de dados do jogo MMOFPS Triggerun.
                         </p>
+                        <div class="project-contribution">
+                            <strong>Minha Contribuição:</strong>
+                            Projeto individual de ponta a ponta. Realizei engenharia reversa nos arquivos originais do jogo, processei bases de dados em XML utilizando parsers em Vanilla JS e criei gráficos analíticos com Chart.js.
+                        </div>
                         <div class="project-tags">
                             <span class="tag">Vanilla JS</span>
                             <span class="tag">Chart.js</span>
@@ -1088,9 +1159,6 @@
                     </a>
                     <a href="https://www.linkedin.com/in/gustavo-king" target="_blank" class="contact-icon" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:gustavosilva12323@hotmail.com" class="contact-icon" title="Email">
-                        <i class="fas fa-envelope"></i>
                     </a>
                 </div>
             </div>
